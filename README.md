@@ -16,7 +16,7 @@ npm install
 
 ```
 4- Buildear el proyecto:
-ng serve
+npm start
 ```
 
 ```
