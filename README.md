@@ -1,5 +1,7 @@
 # Proyecto básico hecho con Node.js y MongoDB
 
+Node.js® es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome.
+
 ```
 1- Instalar Visual Studio Code.
 ```
