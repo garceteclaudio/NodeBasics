@@ -1,29 +1,19 @@
 'use strict'
 
-const express = require('express')
-const bodyParser = require('body-parser')
-
-const app = express()
+// Usar funciones de mongoDB que estan definidas en la libreria mongoose
+const mongoose = require('mongoose')
+const app = require('./app')
 const port = process.env.PORT || 3000
 
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
+//const config = require('./config')
+// config.db
 
-app.get('/api/product', (req, res) => {
-    res.send(200, {products: []})
+mongoose.connect('mongodb://localhost:27017/shop', (err, res) => {
+    if(err) throw err
+    console.log('Conexion a la base de datos establecida')
+
+    app.listen(port, function () {
+        console.log('http://localhost:' + port)
+    })
 })
 
-app.get('/api/product/:productid', (req, res) => {
-
-})
-
-app.post('/api/product', (req, res) => {
-    console.log(req.body)
-    res.status(200).send({message: 'El producto se ha recibido'})
-})
-
-
-
-app.listen(port, function () {
-    console.log('http://localhost:' + port)
-})
