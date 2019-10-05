@@ -1,0 +1,31 @@
+sudo su
+docker images
+docker pull mongo
+docker images
+docker run -d -p 27017:27017 mongo
+docker ps
+
+docker stop 0a
+
+
+
+docker-compose up
+
+___________________
+Proyecto:
+
+node.js
+express
+
+Crear proyecto:
+npm init
+Dependencias:
+npm install express --save
+npm i -S body-parser
+npm i -D nodemon
+
+Ejecutar proyecto: npm start
+
+------------------------------
+
+https://www.youtube.com/watch?v=SXYrPO0TxeQ&list=PLUdlARNXMVkk7E88zOrphPyGdS50Tadlr&index=11
