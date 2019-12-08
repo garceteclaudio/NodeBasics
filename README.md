@@ -30,12 +30,18 @@ http://localhost:3000/
 
 
 
-
+```
 sudo su
+```
 docker images
+```
 docker pull mongo
+```
 docker images
+```
 docker run -d -p 27017:27017 mongo
+```
 docker ps
-
+```
 docker stop 0a
+```
